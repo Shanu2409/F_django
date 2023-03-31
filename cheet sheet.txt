@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 1. To create django project = django-admin startproject [project_name] && do python manage.py makemigrations and python manage.py migrate
 
 2. To start server = python manage.py runserver 
@@ -20,27 +19,14 @@ migraete = apply the pending changes created by makemigrations
 	
 	path('', include("[app_name].urls")),
 
-=======
-1. To create django project = django-admin startproject [project_name] && do python manage.py makemigrations and python manage.py migrate
-
-2. To start server = python manage.py runserver 
-
-3. To create app = python monage.py startapp [app_name] --- Whenever you create a new app do rember to register it in settings.py -> INSTALLED_APPS in main project dir
-
-makemigrations = create changes and store in a file
-migraete = apply the pending changes created by makemigrations
-
-4. Add static folder in app and add this code in settings.py
-	
-	STATICFILES_DIRS = [
-    		os.path.join(BASE_DIR, "static")
-	]
-
-5. Create templates folder in app and register in settings.py -> TEMPLATES -> 'DIRS' : [os.path.join(BASE_DIR, "templates")]
-
-6. Go to projects urls.py and add apps urls path 
-	
-	path('', include("[app_name].urls")),
-
->>>>>>> dd99b5accde1254c1000add6bf4583e7b16690c3
 6. Create urls.py in your app and add all the routes
+
+		ex.
+			urlpatterns = [
+				path("", views.index,name="index"),
+				path("about/", views.about,name="about"),
+				path("services/", views.services,name="services"),
+				path("contact/", views.contact,name="contact"),
+			]
+
+			don't forget to add views from apps
