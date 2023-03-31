@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 	Model register & app register
 
 1. Create model in models.py
@@ -8,4 +9,16 @@
 
 
 python .\manage.py makemigrations
+=======
+	Model register & app register
+
+1. Create model in models.py
+2. Go to admin.py -> import your model -> register your model (admin.site.register([model]))
+3. go to app.py -> copy app name/class name -> go to settings.py -> in INSTALLED_APPS add '[app_name].apps.[class_name]',
+4. in cmd run -> python manage.py makemigrations
+5. go to admin page to confirm created model
+
+
+python .\manage.py makemigrations
+>>>>>>> dd99b5accde1254c1000add6bf4583e7b16690c3
 python .\manage.py migrate
